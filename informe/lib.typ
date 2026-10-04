@@ -45,13 +45,17 @@
           text( 12pt, committee ),
           text( 12pt, institution ),
           text( 12pt, faculty),
-          text( 12pt, date),
-          line(length: 175%, stroke: 0.5pt),
-          v(5pt)
+          text( 12pt, date)
         ),
         if( logo_right != none ){
           align( right, image( logo_right ) )
         },
+      )
+      grid(
+        columns: (1fr),
+        align: center+horizon,
+        line( length: 100%, stroke: 0.5pt ),
+        v(15pt)
       )
     },
     footer-descent: 0%
