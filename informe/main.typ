@@ -1,6 +1,6 @@
 #import "lib.typ": *
 
-#show: doc => actas(
+#show: doc => informe(
   title: "Title Here",
   organization: "Your Organization Here",
   committee: "Your Committee",

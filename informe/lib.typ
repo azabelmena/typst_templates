@@ -14,7 +14,7 @@
   )
 }
 
-#let actas(
+#let informe(
   title: "",
   date: none,
   organization: none,
