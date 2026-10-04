@@ -31,7 +31,8 @@
           text( 12pt, institution ),
           text( 12pt, faculty),
           text( 12pt, date),
-          line(length: 175%, stroke: 0.5pt)
+          line(length: 175%, stroke: 0.5pt),
+          v(5pt)
         ),
         if( logo_right != none ){
           align( right, image( logo_right ) )

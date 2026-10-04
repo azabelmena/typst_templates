@@ -7,8 +7,8 @@
   institution: "Your Institution",
   faculty: "Your Faculty",
   date: today.display( "[day] de [month repr:long] de [year]" ),
-  logo_left: "figures/logo.png",
-  logo_right: "figures/cat.jpg",
+  //logo_left: "figures/logo.png",
+  //logo_right: "figures/cat.jpg",
   doc
 )
 
