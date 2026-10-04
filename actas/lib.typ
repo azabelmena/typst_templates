@@ -1,5 +1,19 @@
 #let today = datetime.today()
 
+#let signature( name: "", position: "" ) = {
+  grid(
+    columns: (1fr),
+    align: bottom,
+    v(150pt),
+    line( length: 35%, stroke: 0.5pt ),
+    v(10pt),
+    stack(dir: ttb, spacing: 5pt,
+      text( 12pt, name ),
+      text( 12pt, position )
+    )
+  )
+}
+
 #let actas(
   title: "",
   date: none,
@@ -10,6 +24,7 @@
   logo_left: none,
   logo_right: none,
   agenda: true,
+  require-signature: true,
   doc
 ) = {
   set page(
@@ -38,11 +53,6 @@
           align( right, image( logo_right ) )
         },
       )
-      //grid(
-        //columns: (1fr),
-        //align: horizon,
-        //line(length: 100%, stroke: 0.5pt)
-      //)
     },
     footer-descent: 0%
 )
@@ -65,5 +75,14 @@ if( agenda != false ){
   outline( title: [Agenda] )
 }
 
+
 doc
+
+if( require-signature != false ){
+  place(
+    left,
+    signature( name: "Alec S. Zabel-Mena", position: "Tesorero" )
+  )
+}
+
 }
