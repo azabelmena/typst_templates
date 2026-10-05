@@ -41,11 +41,11 @@
       v(10pt)
       grid(
         columns: (1fr, 4fr, 1fr),
-        align: center+horizon,
+        align: center+bottom,
         if( logo_left != none ){
           align( left, image( logo_left ) )
         },
-        stack(dir: ttb, spacing: 5pt,
+        stack(dir: ttb, spacing: 0.5em,
           text( 16pt, weight: "bold", organization ),
           text( 12pt, committee ),
           text( 12pt, institution ),
