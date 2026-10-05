@@ -6,6 +6,7 @@
   committee: "Your Committee",
   institution: "Your Institution",
   faculty: "Your Faculty",
+  type: [ Type of Document ],
   date: today.display( "[day] de [month repr:long] de [year]" ),
   logo_left: "figures/logo.png",
   logo_right: "figures/cat.jpg",

@@ -25,6 +25,7 @@
   committee: none,
   institution: none,
   faculty: none,
+  type: "",
   logo_left: none,
   logo_right: none,
   agenda: true,
@@ -45,10 +46,11 @@
           align( left, image( logo_left ) )
         },
         stack(dir: ttb, spacing: 5pt,
-          text( 12pt, weight: "bold", organization ),
+          text( 16pt, weight: "bold", organization ),
           text( 12pt, committee ),
           text( 12pt, institution ),
-          text( 12pt, faculty),
+          text( 12pt, faculty),v(1em),
+          smallcaps(text( 12pt, weight: "medium", type)),
           text( 12pt, date)
         ),
         if( logo_right != none ){
@@ -59,8 +61,8 @@
         columns: (1fr),
         align: center+horizon,
         line( length: 100%, stroke: 0.5pt ),
-        v(15pt)
       )
+      v(0.5em)
     },
     footer-descent: 0%
 )
