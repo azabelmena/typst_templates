@@ -85,7 +85,7 @@ doc
 if( require-signature != false ){
   place(
     left,
-    signature( name: "Alec S. Zabel-Mena", position: "Tesorero" )
+    signature( name: "Your Name", position: "Your Position" )
   )
 }
 
