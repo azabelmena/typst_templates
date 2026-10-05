@@ -1,5 +1,3 @@
-#let today = datetime.today()
-
 #let signature( name: "", degree: none, position: "" ) = {
   grid(
     columns: (1fr),
@@ -46,7 +44,7 @@
           align( left, image( logo_left ) )
         },
         stack(dir: ttb, spacing: 0.5em,
-          text( 16pt, weight: "bold", organization ),
+          text( 14pt, weight: "bold", organization ),
           text( 12pt, committee ),
           text( 12pt, institution ),
           text( 12pt, faculty),v(1em),
