@@ -1,14 +1,18 @@
 #let today = datetime.today()
 
-#let signature( name: "", position: "" ) = {
+#let signature( name: "", degree: none, position: "" ) = {
   grid(
     columns: (1fr),
     align: bottom,
-    v(150pt),
+    v(10em),
     line( length: 35%, stroke: 0.5pt ),
-    v(10pt),
-    stack(dir: ttb, spacing: 5pt,
-      text( 12pt, name ),
+    v(0.5em),
+    stack(dir: ttb, spacing: 0.5em,
+      if( degree != none ){
+        text( 12pt, name+", "+degree )
+      }else{
+        text( 12pt, name )
+      },
       text( 12pt, position )
     )
   )
