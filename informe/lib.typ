@@ -41,7 +41,7 @@
         align: center+horizon,
         line( length: 100%, stroke: 0.5pt ),
       )
-      v(0.5em)
+      v(1em)
     },
     footer-descent: 0%
 )
