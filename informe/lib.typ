@@ -1,25 +1,3 @@
-#let signature(
-  name: "Name",
-  degree: "Degree(optional)",
-  position: "Position"
-) = {
-  grid(
-    columns: (1fr),
-    align: bottom,
-    v(10em),
-    line( length: 35%, stroke: 0.5pt ),
-    v(0.5em),
-    stack(dir: ttb, spacing: 0.5em,
-      if( degree != none ){
-        text( 12pt, name+", "+degree )
-      }else{
-        text( 12pt, name )
-      },
-      text( 12pt, position )
-    )
-  )
-}
-
 #let informe(
   title: "",
   date: none,
@@ -93,6 +71,28 @@ if( agenda != false ){
 doc
 }
 
+#let signature(
+  name: "Name",
+  degree: "Degree(optional)",
+  position: "Position"
+) = {
+  grid(
+    columns: (1fr),
+    align: bottom,
+    v(10em),
+    line( length: 35%, stroke: 0.5pt ),
+    v(0.5em),
+    stack(dir: ttb, spacing: 0.5em,
+      if( degree != none ){
+        text( 12pt, name+", "+degree )
+      }else{
+        text( 12pt, name )
+      },
+      text( 12pt, position )
+    )
+  )
+}
+
 #let appendix(body) = {
   set heading(numbering: "A.1", supplement: [Appendix], outlined: false)
   counter(heading).update(0)
@@ -100,6 +100,16 @@ doc
     v(1em)
     [#it.supplement #counter(heading).display():]
     h(0.3em)
+    it.body
+  }
+  body
+}
+
+#let errata(body) = {
+  set heading(supplement: [], outlined: false)
+  show heading: it => {
+    v(1em)
+    [#it.supplement]
     it.body
   }
   body

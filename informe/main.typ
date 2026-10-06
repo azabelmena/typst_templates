@@ -35,3 +35,8 @@
 = Example Appendix
 
 #lorem(50)
+
+#show: errata
+= Fe de Errata
+
+#lorem(30)
