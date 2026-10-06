@@ -1,6 +1,10 @@
+#let day = datetime.today().display("[day padding:none]")
+#let month = datetime.today().display("[month repr:long]")
+#let year = datetime.today().display("[year repr:full]")
+
+
 #let informe(
   title: "",
-  date: none,
   organization: none,
   committee: none,
   institution: none,
@@ -9,6 +13,7 @@
   logo_left: none,
   logo_right: none,
   agenda: true,
+  date: [#day #month #year],
   doc
 ) = {
   set page(
@@ -28,7 +33,7 @@
           text( 14pt, weight: "bold", organization ),
           text( 12pt, committee ),
           text( 12pt, institution ),
-          text( 12pt, faculty),v(1em),
+          text( 12pt, faculty),v(0.5em),
           smallcaps(text( 12pt, weight: "semibold", type)),
           text( 12pt, date)
         ),
@@ -41,7 +46,7 @@
         align: center+horizon,
         line( length: 100%, stroke: 0.5pt ),
       )
-      v(1em)
+      v(0.5em)
     },
     footer-descent: 0%
 )

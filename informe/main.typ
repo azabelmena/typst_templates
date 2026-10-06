@@ -6,8 +6,7 @@
   committee: "Your Committee",
   institution: "Your Institution",
   faculty: "Your Faculty",
-  type: [ Type of Document ],
-  date: "",
+  type: [Type of Document],
   logo_left: "figures/logo.png",
   logo_right: "figures/cat.jpg",
   doc
@@ -37,6 +36,6 @@
 #lorem(50)
 
 #show: errata
-= Fe de Errata
+= Errata
 
 #lorem(30)
