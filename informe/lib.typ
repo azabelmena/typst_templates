@@ -1,4 +1,8 @@
-#let signature( name: "", degree: none, position: "" ) = {
+#let signature(
+  name: "Name",
+  degree: "Degree(optional)",
+  position: "Position"
+) = {
   grid(
     columns: (1fr),
     align: bottom,
@@ -27,7 +31,6 @@
   logo_left: none,
   logo_right: none,
   agenda: true,
-  require-signature: true,
   doc
 ) = {
   set page(
@@ -48,7 +51,7 @@
           text( 12pt, committee ),
           text( 12pt, institution ),
           text( 12pt, faculty),v(1em),
-          smallcaps(text( 12pt, weight: "medium", type)),
+          smallcaps(text( 12pt, weight: "semibold", type)),
           text( 12pt, date)
         ),
         if( logo_right != none ){
@@ -78,19 +81,26 @@ set text(
 v(15pt)
 align( center, text( 24pt, title ) )
 
-set heading( numbering: "1." )
+set heading(
+  numbering: "1."
+)
+show heading: set text(20pt, weight: "semibold")
+
 if( agenda != false ){
   outline( title: [Agenda] )
 }
 
-
 doc
-
-if( require-signature != false ){
-  place(
-    left,
-    signature( name: "Your Name", position: "Your Position" )
-  )
 }
 
+#let appendix(body) = {
+  set heading(numbering: "A.1", supplement: [Appendix], outlined: false)
+  counter(heading).update(0)
+  show heading: it => {
+    v(1em)
+    [#it.supplement #counter(heading).display():]
+    h(0.3em)
+    it.body
+  }
+  body
 }

@@ -7,10 +7,9 @@
   institution: "Your Institution",
   faculty: "Your Faculty",
   type: [ Type of Document ],
-  date: today.display( "[day] de [month repr:long] de [year]" ),
+  date: "",
   logo_left: "figures/logo.png",
   logo_right: "figures/cat.jpg",
-  require-signature: true,
   doc
 )
 
@@ -29,3 +28,10 @@
 = #lorem(1)
 
 #lorem(100)
+
+#signature()
+
+#show: appendix
+= Example Appendix
+
+#lorem(50)
