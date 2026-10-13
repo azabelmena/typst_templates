@@ -30,6 +30,8 @@
 
 #signature()
 
+#v(1em)
+
 #show: appendix
 = Example Appendix
 
@@ -38,4 +40,7 @@
 #show: errata
 = Errata
 
-#lorem(30)
+#lorem(300)
+
+#v(1em)
+#info()

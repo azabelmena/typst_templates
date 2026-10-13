@@ -2,7 +2,6 @@
 #let month = datetime.today().display("[month repr:long]")
 #let year = datetime.today().display("[year repr:full]")
 
-
 #let informe(
   title: "",
   organization: none,
@@ -74,6 +73,31 @@ if( agenda != false ){
 }
 
 doc
+}
+
+#let info(
+  name: [Name],
+  degree: [Degree(optional)],
+  address: [Some address],
+  office: [WEED---420],
+  email: `john.doe@email.com`
+) = {
+  grid(
+    columns: (1fr),
+    align: bottom,
+    v(0.5em),
+    stack(dir: ttb, spacing: 0.5em,
+      if( degree != none ){
+        text( 12pt, smallcaps(name)+", "+smallcaps(degree) )
+      }else{
+        text( 12pt, smallcaps(name) )
+      },
+      smallcaps(address),
+      text(12pt, style: "italic", "Office: ")+text(12pt, office),
+      text(12pt, style: "italic", "Email Address: ")+
+          text(12pt, email)
+    )
+  )
 }
 
 #let signature(
