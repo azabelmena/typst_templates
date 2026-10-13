@@ -35,9 +35,5 @@
 #show: appendix
 = Example Appendix
 
-#lorem(50)
-
 #show: errata
 = Errata
-
-#lorem(300)
