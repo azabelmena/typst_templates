@@ -41,6 +41,3 @@
 = Errata
 
 #lorem(300)
-
-#v(1em)
-#info()
